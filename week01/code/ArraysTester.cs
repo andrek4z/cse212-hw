@@ -39,7 +39,14 @@ public static class ArraysTester {
         // step by step before you write the code. The plan should be clear enough that it could
         // be implemented by another person.
 
-         // Create an empty list to store the multiples.
+        //Plan: 
+        //1.Create an empty list to store the multiples.
+        //2.Set up a loop that iterates from 1 to the number of multiples.
+        //3.For each iteration, calculate the current multiple by multiplying the starting number by the loop counter.
+        //4.Add the current multiple to the list.
+        //5.Return the list of multiples.
+
+        // Create an empty list to store the multiples.
         List<double> multiples = new List<double>();
 
         // Set up a loop that iterates from 1 to the number of multiples.
@@ -70,7 +77,12 @@ public static class ArraysTester {
         // Remember: Using comments in your program, write down your process for solving this problem
         // step by step before you write the code. The plan should be clear enough that it could
         // be implemented by another person.
-        
+
+        //Plan:
+        //1.Create a temporary list to store the values to be moved to the end of the data list.
+        //2.Remove the specified number of elements from the end of the data list and add them to the temporary list.
+        //3.Insert the temporary list into the beginning of the data list.
+
         // Create a temporary list to store the values to be moved to the end of the data list.
         List<int> temp = new List<int>();
 
