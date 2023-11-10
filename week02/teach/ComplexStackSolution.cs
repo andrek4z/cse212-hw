@@ -25,9 +25,10 @@ public static class ComplexStackSolution
         Console.WriteLine(CheckBraces("(robot[id + 1].Execute(.Pass() || (!robot[id * (2 + i)].Alive && stormy) || (robot[id - 1].Alive && lavaFlowing))"));
     }
 
-    public static bool CheckBraces(string line) 
+    public static bool CheckBraces(string line)
     {
         var stack = new Stack<char>();
+
         foreach (var item in line) 
         {
             if (item is '(' or '[' or '{') 
