@@ -8,7 +8,8 @@
  * GitHub repository, unshared Google Drive folder) is acceptable.
  *
  */
-public class PriorityQueue {
+public class PriorityQueue 
+{
     private List<PriorityItem> _queue = new();
 
     /// <summary>
@@ -18,12 +19,14 @@ public class PriorityQueue {
     /// </summary>
     /// <param name="value">The value</param>
     /// <param name="priority">The priority</param>
-    public void Enqueue(string value, int priority) {
+    public void Enqueue(string value, int priority) 
+    {
         var newNode = new PriorityItem(value, priority);
         _queue.Add(newNode);
     }
 
-    public String Dequeue() {
+    public String Dequeue() 
+    {
         if (_queue.Count == 0) // Verify the queue is not empty
         {
             Console.WriteLine("The queue is empty.");
@@ -32,7 +35,8 @@ public class PriorityQueue {
 
         // Find the index of the item with the highest priority to remove
         var highPriorityIndex = 0;
-        for (int index = 1; index < _queue.Count - 1; index++) {
+        for (int index = 1; index < _queue.Count - 1; index++) 
+        {
             if (_queue[index].Priority >= _queue[highPriorityIndex].Priority)
                 highPriorityIndex = index;
         }
@@ -42,7 +46,8 @@ public class PriorityQueue {
         return value;
     }
 
-    public override string ToString() {
+    public override string ToString() 
+    {
         return $"[{string.Join(", ", _queue)}]";
     }
 }
