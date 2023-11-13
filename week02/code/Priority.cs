@@ -20,7 +20,8 @@ public static class Priority
         // Test Cases
 
         // Test 1
-        // Scenario: The following list shows that Lucy has the priority number, troy the second priority number, then Lily and finally John.
+        // Scenario: The following list shows that Lucy has the priority number, troy the second priority number, 
+        //           then Lily and finally John.
         // Expected Result: Lucy, Troy, Lily, John
         Console.WriteLine("Test 1");
         priorityQueue = new PriorityQueue();
@@ -44,7 +45,7 @@ public static class Priority
 
         // Test 2
         // Scenario: Troy has the priority number, then Gaz and Jo have the same priority number. Gaz was added first so he should leave
-        // the list first and then Jo. Finally  Josh should leave the list at the end.
+        //           the list first and then Jo. Finally  Josh should leave the list at the end.
         // Expected Result: Troy, Gaz, Jo, Josh
         Console.WriteLine("Test 2");
         priorityQueue = new PriorityQueue();
