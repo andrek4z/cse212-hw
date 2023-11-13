@@ -70,7 +70,8 @@ public static class TakingTurns
             players.GetNextPerson();
             // Console.WriteLine(players);
         }
-        // Defect(s) Found: 
+        // Defect(s) Found: The If conditional doesn't have an option if the player have an infinitive turn. 
+        //                  I add a second option: "if (person.Turns > 1 || person.Turns <= 0)"
 
         Console.WriteLine("---------");
 
