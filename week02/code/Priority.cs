@@ -21,24 +21,17 @@ public static class Priority
 
         // Test 1
         // Scenario: 
-        // Expected Result: 
+        // Expected Result: Lucy, Troy, Lily, John
         Console.WriteLine("Test 1");
         priorityQueue = new PriorityQueue();
 
-        priorityQueue.Enqueue("High Priority Item", 1);
-        priorityQueue.Enqueue("Medium Priority Item", 2);
-        priorityQueue.Enqueue("Low Priority Item", 3);
+        priorityQueue.Enqueue("John", 1);
+        priorityQueue.Enqueue("Lily", 2);
+        priorityQueue.Enqueue("Troy", 3);
+        priorityQueue.Enqueue("Lucy", 4);
 
-        //Console.WriteLine(priorityQueue);
+        // Console.WriteLine(priorityQueue);
 
-        var highPriorityItem = priorityQueue.Dequeue();
-        Console.WriteLine(highPriorityItem);
-
-        var mediumPriorityItem = priorityQueue.Dequeue();
-        Console.WriteLine(mediumPriorityItem);
-
-        var lowPriorityItem = priorityQueue.Dequeue();
-        Console.WriteLine(lowPriorityItem);
 
         // Defect(s) Found: 
 
@@ -46,24 +39,17 @@ public static class Priority
 
         // Test 2
         // Scenario: 
-        // Expected Result: 
+        // Expected Result: Troy, Gaz, Jo, Josh
         Console.WriteLine("Test 2");
         priorityQueue = new PriorityQueue();
 
-        priorityQueue.Enqueue("High Priority Item 1", 1);
-        priorityQueue.Enqueue("High Priority Item 2", 1);
-        priorityQueue.Enqueue("Medium Priority Item", 2);
+        priorityQueue.Enqueue("Josh", 2);
+        priorityQueue.Enqueue("Gaz", 3);
+        priorityQueue.Enqueue("Jo", 3);
+        priorityQueue.Enqueue("Troy", 5);
 
-        //Console.WriteLine(priorityQueue);
+        // Console.WriteLine(priorityQueue);
 
-        var highPriorityItem1 = priorityQueue.Dequeue();
-        Console.WriteLine(highPriorityItem1);
-
-        var highPriorityItem2 = priorityQueue.Dequeue();
-        Console.WriteLine(highPriorityItem2);
-
-        var mediumPriorityItem2 = priorityQueue.Dequeue();
-        Console.WriteLine(mediumPriorityItem2);
 
         // Defect(s) Found: 
 
