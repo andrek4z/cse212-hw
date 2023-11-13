@@ -32,8 +32,13 @@ public static class Priority
 
         // Console.WriteLine(priorityQueue);
 
+        for (int i = 0; i < 4; i++) 
+        {
+            var r = priorityQueue.Dequeue();
+            Console.WriteLine(r);
+        }
 
-        // Defect(s) Found: 
+        // Defect(s) Found: The Dequeue funtion doesn't remove the priorityQueue so I added the "_queue.RemoveAt(highPriorityIndex);" now the code is working.
 
         Console.WriteLine("---------");
 
@@ -49,9 +54,13 @@ public static class Priority
         priorityQueue.Enqueue("Troy", 5);
 
         // Console.WriteLine(priorityQueue);
+        for (int i = 0; i < 4; i++) 
+        {
+            var r = priorityQueue.Dequeue();
+            Console.WriteLine(r);
+        }
 
-
-        // Defect(s) Found: 
+        // Defect(s) Found: The Dequeue funtion doesn't remove the priorityQueue so I added the "_queue.RemoveAt(highPriorityIndex);" now the code is working.
 
         Console.WriteLine("---------");
 
