@@ -65,5 +65,17 @@ public static class Priority
         Console.WriteLine("---------");
 
         // Add more Test Cases As Needed Below
+
+        // Test 3
+        // Scenario: THe Queue is empty so it should be show an error message
+        // Expected Result: The queue is empty.
+        Console.WriteLine("Test 3");
+        priorityQueue = new PriorityQueue();
+        var q = priorityQueue.Dequeue();
+        Console.Write(q);
+
+        // Defect(s) Found: None
+
+        Console.WriteLine("---------");
     }
 }
