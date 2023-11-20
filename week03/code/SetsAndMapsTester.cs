@@ -243,7 +243,8 @@ public static class SetsAndMapsTester
     /// </summary>
     private static Dictionary<ValueTuple<int, int>, bool[]> SetupMazeMap() 
     {
-        Dictionary<ValueTuple<int, int>, bool[]> map = new() {
+        Dictionary<ValueTuple<int, int>, bool[]> map = new() 
+        {
             { (1, 1), new[] { false, true, false, true } },
             { (1, 2), new[] { false, true, true, false } },
             { (1, 3), new[] { false, false, false, false } },
