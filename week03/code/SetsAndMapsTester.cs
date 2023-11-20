@@ -114,6 +114,26 @@ public static class SetsAndMapsTester
         // To display the pair correctly use something like:
         // Console.WriteLine($"{word} & {pair}");
         // Each pair of words should displayed on its own line.
+        // Create a set to store the words
+        var wordSet = new HashSet<string>(words);
+
+        // Iterate over the words
+        foreach (var word in words)
+        {
+            // Reverse the word
+            var pair = new string(word.Reverse().ToArray());
+
+            // Check if the reversed word is in the set
+            if (wordSet.Contains(pair))
+            {
+                // Check if the current word comes before the reversed word in lexicographical order
+                if (word.CompareTo(pair) > 0)
+                {
+                    // Display the pair of words in the order of the original list
+                    Console.WriteLine($"{word} & {pair}");
+                }
+            }
+        }
     }
 
     /// <summary>
