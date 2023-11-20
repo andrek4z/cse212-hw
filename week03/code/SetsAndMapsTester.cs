@@ -157,12 +157,13 @@ public static class SetsAndMapsTester
         {
             var fields = line.Split(",");
             // Todo Problem 2 - ADD YOUR CODE HERE
-            string degree = fields[4];
+            string degree = fields[3];
 
             if(!degrees.ContainsKey(degree))
             {
                 degrees[degree] = 0;
             }
+
             degrees[degree]++;
         }
 
