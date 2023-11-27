@@ -34,23 +34,23 @@ public class LinkedList : IEnumerable<int>
     {
         // TODO Problem 1
 
-        // Create a new node
         Node newNode = new Node(value);
 
         // Check if the list is empty
-        if (_head is null)
+        if (_head == null) 
         {
             // Set both head and tail to the new node
             _head = newNode;
             _tail = newNode;
-        }
-        else
+        } 
+        else 
         {
-            // Connect the new node to the tail
-            _tail.Next = newNode;
-
-            // Update the tail to point to the new node
-            _tail = newNode;
+            // Check if the tail is null before assigning to 'Next'
+            if (_tail != null) 
+            {
+                _tail.Next = newNode;
+                _tail = newNode;
+            }
         }
     }
 
