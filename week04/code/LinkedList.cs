@@ -37,9 +37,10 @@ public class LinkedList : IEnumerable<int>
         // Create a new node
         Node newNode = new Node(value);
 
-        // If the list is empty, both head and tail point to the new node
+        // Check if the list is empty
         if (_head is null)
         {
+            // Set both head and tail to the new node
             _head = newNode;
             _tail = newNode;
         }
