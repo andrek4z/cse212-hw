@@ -98,17 +98,20 @@ public class LinkedList : IEnumerable<int>
             return;
         }
 
-        // Identify the second-last node
-        Node secondLast = _head;
-        while (secondLast.Next != _tail)
+        // Identify the second-last node (if there is one)
+        Node? secondLast = _head;
+        while (secondLast != null && secondLast.Next != _tail)
         {
             secondLast = secondLast.Next;
         }
 
-        // Disconnect the tail node from the second-last node
-        secondLast.Next = null;
+        // Disconnect the tail node from the second-last node (if it exists)
+        if (secondLast != null)
+        {
+            secondLast.Next = null;
+        }
 
-        // Update the tail to point to the second-last node
+        // Update the tail to point to the second-last node (if it was updated)
         _tail = secondLast;
     }
 
