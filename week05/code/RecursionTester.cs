@@ -182,6 +182,17 @@ public static class RecursionTester
     public static void PermutationsChoose(string letters, int size, string word = "") 
     {
         // TODO Start Problem 2
+        if (size == 0)
+        {
+            Console.WriteLine(word);
+            return;
+        }
+
+        for (int i = 0; i < letters.Length; i++)
+        {
+            string newLetters = letters.Substring(0, i) + letters.Substring(i + 1);
+            PermutationsChoose(newLetters, size - 1, word + letters[i]);
+        }
     }
 
     /// <summary>
