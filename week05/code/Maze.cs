@@ -5,7 +5,8 @@ public class Maze
 
     public readonly int[] Data;
 
-    public Maze(int width, int height, int[] data) {
+    public Maze(int width, int height, int[] data) 
+    {
         this.Width = width;
         this.Height = height;
         this.Data = data;

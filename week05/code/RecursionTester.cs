@@ -301,6 +301,18 @@ public static class RecursionTester
     public static void WildcardBinary(string pattern) 
     {
         // TODO Start Problem 4
+        if (pattern.IndexOf('*') == -1)
+        {
+            Console.WriteLine(pattern);
+            return;
+        }
+
+        int index = pattern.IndexOf('*');
+        string left = pattern.Substring(0, index);
+        string right = pattern.Substring(index + 1);
+
+        WildcardBinary(left + "0" + right);
+        WildcardBinary(left + "1" + right);
     }
 
     /// <summary>
@@ -312,13 +324,15 @@ public static class RecursionTester
         // If this is the first time running the function, then we need
         // to initialize the currPath list.
         if (currPath == null)
+        {
             currPath = new List<ValueTuple<int, int>>();
+        }
 
-        // currPath.Add((1,2)); // Use this syntax to add to the current path
+        //currPath.Add((1,2)); // Use this syntax to add to the current path
 
         // TODO Start Problem 5
         // ADD CODE HERE
-
-        // Console.WriteLine(currPath.AsString()); // Use this to print out your path when you find the solution
+        
+        Console.WriteLine(currPath.AsString()); // Use this to print out your path when you find the solution
     }
 }
