@@ -332,7 +332,46 @@ public static class RecursionTester
 
         // TODO Start Problem 5
         // ADD CODE HERE
-        
-        Console.WriteLine(currPath.AsString()); // Use this to print out your path when you find the solution
+
+        // Check if we've reached the end of the maze
+        if (maze.IsEnd(x, y))
+        {
+            // Add the final step to the path
+            currPath.Add((x, y));
+
+            // Print the path
+            Console.WriteLine(currPath.AsString());
+
+            // Remove the final step from the path to backtrack
+            currPath.RemoveAt(currPath.Count - 1);
+            return;
+        }
+
+        // Mark the current position as visited
+        currPath.Add((x, y));
+
+        // Try moving up, down, left, and right
+        for (int dx = -1; dx <= 1; dx++)
+        {
+            for (int dy = -1; dy <= 1; dy++)
+            {
+                // Skip the current position and diagonals
+                if (dx == 0 && dy == 0) continue;
+                if (Math.Abs(dx) == 1 && Math.Abs(dy) == 1) continue;
+
+                // Check if the new position is valid
+                int newX = x + dx;
+                int newY = y + dy;
+                if (maze.IsValidMove(currPath, newX, newY))
+                {
+                    // Recursively explore the new position
+                    SolveMaze(maze, newX, newY, currPath);
+                }
+            }
+        }
+
+        // Remove the current position from the path to backtrack
+        currPath.RemoveAt(currPath.Count - 1);
+        //Console.WriteLine(currPath.AsString()); // Use this to print out your path when you find the solution
     }
 }
