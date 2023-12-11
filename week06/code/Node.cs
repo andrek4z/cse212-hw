@@ -37,6 +37,7 @@ public class Node
 
     public bool Contains(int value) 
     {
+        // TODO Start Problem 2
         if (value == Data) 
         {
             // Value found
@@ -68,13 +69,23 @@ public class Node
                 return false;
             }
         }
-        // TODO Start Problem 2
         //return false;
     }
 
     public int GetHeight() 
-    {
-        // TODO Start Problem 4
-        return 0; // Replace this line with the correct return statement(s)
+    { 
+        // Check if the node is null, signifying an empty tree.
+        if (this == null)
+        {
+            return 0;
+        }
+
+        // Determine the height of both left and right subtrees.
+        int leftHeight = Left?.GetHeight() ?? 0;
+        int rightHeight = Right?.GetHeight() ?? 0;
+
+        // Return the height of the current node as 1 plus the maximum height of its subtrees.
+        return 1 + Math.Max(leftHeight, rightHeight);
+        //return 0; // Replace this line with the correct return statement(s)
     }
 }
