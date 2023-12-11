@@ -11,14 +11,22 @@ public class Node
 
     public void Insert(int value) 
     {
-        if (value < Data) {
+        if (value == Data)
+        {
+            return;
+        }
+
+        else if (value < Data) 
+        {
             // Insert to the left
             if (Left is null)
                 Left = new Node(value);
             else
                 Left.Insert(value);
         }
-        else {
+        
+        else 
+        {
             // Insert to the right
             if (Right is null)
                 Right = new Node(value);
