@@ -103,5 +103,23 @@ public static class TreesTester
     private static void InsertMiddle(int[] sortedNumbers, int first, int last, BinarySearchTree bst) 
     {
         // TODO Start Problem 5
+        // Check if the sublist is empty (no elements).
+        if (first > last)
+        {
+            return;
+        }
+
+        // Find the middle element of the sublist.
+        int middleIndex = (first + last) / 2;
+        int middleValue = sortedNumbers[middleIndex];
+
+        // Insert the middle value into the BST.
+        bst.Insert(middleValue);
+
+        // Recursively insert the left half.
+        InsertMiddle(sortedNumbers, first, middleIndex - 1, bst);
+
+        // Recursively insert the right half.
+        InsertMiddle(sortedNumbers, middleIndex + 1, last, bst);
     }
 }
